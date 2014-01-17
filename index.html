@@ -89,19 +89,22 @@
 					</section>
 
 					<section data-background="assets/sunrise.jpg">
+						<h3>This is not how I felt</h3>
 						<aside class="notes">The way I felt was the opposite of this</aside>
 					</section>
 
 					<section data-background="assets/storm.jpg">
+						<h3>This is how I felt</h3>
 						<aside class="notes">Yes, more like this</aside>
 					</section>
 
 					<section data-background="assets/brittle.jpg">
-						<h3>Weird, brittle, Byzantine</h3>
+						<h3>CVS: Weird, brittle, Byzantine</h3>
 						<aside class="notes">CVS is weird and brittle enough on its own, and renaming committed directories infuriating and Byzantine.
 					</section>
 
 					<section data-background="assets/complicated.jpg">
+						<h3>But our workflow was confounding</h3>
 						<aside class="notes">But this was even further complicated by elements
 					  of our workflow that I didn't understand, and which scared me.</aside>
 					</section>
@@ -202,22 +205,135 @@
 				  </section>
 
 				  <section>
-				  	<blockquote><span class="fragment">The orchestration of</span> processes and tools that make things more consistent and less sucky</blockquote>
+				  	<blockquote><span class="fragment highlight-cloudfour">The orchestration of</span> processes and tools that make things more consistent and less sucky</blockquote>
 				  </section>
 
-				  <section>
+				  <section data-background="assets/piano.jpg">
 				  	<h3>Orchestration</h3>
 				  	<aside class="notes">A good workflow orchestrates and coordinates component tools and assets</aside>
 				  </section>
+				 </section>
+
+				 <section>
+
+				  <section data-background="#ffcc2f">
+				  	<img src="assets/bower.png" alt="bower">
+				  </section>
+
+				  <section data-background="#f3f3f3">
+				  	<img src="assets/yeoman.png" alt="yeoman">
+				  </section>
+
+				  <section data-background="#ffffff">
+				  	<img src="assets/gulp-js.png" alt="gulp.js">
+				  </section>
+
+				  <section data-background="#e48632">
+				  	<img src="assets/grunt.png" alt="grunt">
+				  </section>
 
 				  <section>
-				  	<h3>Components</h3>
+				  	<h3>Orchestrating Components</h3>
 				  	<ul>
-				  		<li>Project structure</li>
-				  		<li>Configuration</li>
-				  		<li>Tools</li>
+				  		<li class="fragment">Package management</li>
+				  		<li class="fragment">Scaffold</li>
+				  		<li class="fragment">Task runner, build</li>
 				  	</ul>
 				  </section>
+
+
+				</section>
+
+				<section>
+
+					<section>
+						<h3>"Weird and hard"</h3>
+						<p><em><a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt for People Who Think Things Like Grunt are Weird and Hard</a></em></p>
+						<p> by Chris Coyier</p>
+					</section>
+
+					<section>
+						<h3>The hard</h3>
+						<h4 class="fragment">Grunt is node!</h4>
+						<h4 class="fragment">Node is weird!</h4>
+						<h4 class="fragment">SASS is ruby!</h4>
+						<h4 class="fragment">That sounds hard!</h4>
+					</section>
+
+					<section>
+						<h3>Do you have five minutes?</h3>
+						<aside class="notes">Use German train clock photo</aside>
+					</section>
+
+					<section data-background="#46483e">
+						<h3>Install Node!</h3>
+						<img src="assets/select-one.png" alt="easy">
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Install NPM!</h3>
+						<img class="fragment" src="assets/super-easy-install.png" alt="more than easy">
+					</section>
+
+					<section data-background="#e48632">
+						<h3>Install Grunt...well, sorta</h3>
+						<pre><code>$ npm install -g grunt-cli</code></pre>
+						<p class="fragment">This actually installs the grunt CLI, not grunt itself.</p>
+					</section>
+
+					<section data-background="#8b1417">
+						<h3>Install Ruby?</h3>
+						<p class="fragment">Possibly not...</p>
+						<pre><code>$ \curl -sSL https://get.rvm.io | bash -s stable —ruby</code></pre>
+						<p class="fragment">One liner: Installs RVM, installs stable ruby</p>
+					</section>
+
+					<section data-background="#444444">
+						<h3>Once more, with feeling</h3>
+						<ol>
+							<li class="fragment">Install node (requires clicking)</li>
+							<li class="fragment">Install the grunt cli (requires copying and pasting a command)</li>
+							<li class="fragment">Install ruby via a ruby version manager if you need to (likely requires nothing)</li>
+						</ol>
+					</section>
+
+
+				</section>
+
+				<section>
+					<section>
+						<h4>Once node and grunt are installed, you're already set up to <em>consume</em> many workflows.</h4>
+					</section>
+
+					<section>
+						<h3>The Weird</h3>
+						<h4>What does it <span class="fragment highlight-cloudfour">do</span>?</h4>
+				  </section> 
+
+					<section>
+						<img src="assets/reveal-instructions.png" alt="Reveal instructions">
+						<h4>Let's get self-referential</h4>
+						<h3>The basic workflow for running reveal.js</h3>
+					</section>
+
+					<section>
+						<img src="assets/reveal-instructions-2.png" alt="Reveal instructions">
+					</section>
+
+					<section data-background="#262822">
+						<ol>
+							<li class="fragment">Clone repository</li>
+							<li class="fragment">(npm) install dependencies</li>
+							<li class="fragment">Run tasks</li>
+						</ol>
+					</section>
+
+					<section data-background="#262822">
+						<h3>Run Tasks</h3>
+						<h4>The beating heart of many modern workflows</h4>
+						<img src="assets/grunt-tasks.png" alt="Grunt tasks">
+						<p><small>gruntfile.js</small></p>
+					</section>
 
 				  <section>
 				  	<h3>A Good Workflow...</h3>
@@ -232,47 +348,6 @@
 				  <section>
 				  	<h4>A good workflow brings joy to your team by emphasizing the "yay" moments and de-emphasizing the misery</h4>
 				  </section>
-				</section>
-
-				<section>
-					<section>
-						<h2>But what does it <strong>do</strong>?</h2>
-					</section>
-
-					<section>
-						<h3>"Weird and hard"</h3>
-						<p>("Grunt for People Who Think Things Like Grunt are Weird and Hard")[http://24ways.org/2013/grunt-is-not-weird-and-hard/] by Chris Coyier</p>
-					</section>
-
-					<section>
-						<h4>Grunt is node!</h4>
-						<h4 class="fragment">Node is weird!</h4>
-						<h4 class="fragment">SASS is ruby!</h4>
-						<h4 class="fragment">That sounds hard!</h4>
-					</section>
-
-					<section>
-						<h3>Canonical Example</h3>
-					</section>
-
-					<section>
-						<h3>Install Node!</h3>
-						<img src="assets/select-one.png" alt="easy">
-					</section>
-
-					<section>
-						<h3>Install NPM!</h3>
-						<img class="fragment" src="assets/super-easy-install.png" alt="more than easy">
-					</section>
-
-					<section>
-						<h3>Install Ruby?</h3>
-						<ul>
-							<li class="fragment">Possibly not...</li>
-							<li class="fragment"><pre><code>$ \curl -sSL https://get.rvm.io | bash -s stable —ruby</code></pre></li>
-							<li class="fragment">One liner: Installs RVM, installs stable ruby</li>
-						</ul>
-					</section>
 				</section>
 
 			</div>
