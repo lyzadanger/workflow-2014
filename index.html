@@ -237,8 +237,12 @@
 				  	<ul>
 				  		<li class="fragment">Package management</li>
 				  		<li class="fragment">Scaffold</li>
-				  		<li class="fragment">Task runner, build</li>
+				  		<li class="fragment"><span class="fragment highlight-cloudfour">Task runner</span>, build</li>
 				  	</ul>
+				  </section>
+
+				  <section data-background="#e48632">
+				  	<img src="assets/grunt.png" alt="grunt">
 				  </section>
 
 
@@ -261,7 +265,13 @@
 					</section>
 
 					<section>
-						<h3>Do you have five minutes?</h3>
+						<h3>The Weird</h3>
+						<h4>What does it <span class="fragment highlight-cloudfour">do</span>?</h4>
+				  </section> 
+
+					<section>
+						<h3>Solving the "Hard"</h3>
+						<h4>Do you have five minutes?</h4>
 						<aside class="notes">Use German train clock photo</aside>
 					</section>
 
@@ -291,9 +301,11 @@
 					<section data-background="#444444">
 						<h3>Once more, with feeling</h3>
 						<ol>
-							<li class="fragment">Install node (requires clicking)</li>
-							<li class="fragment">Install the grunt cli (requires copying and pasting a command)</li>
-							<li class="fragment">Install ruby via a ruby version manager if you need to (likely requires nothing)</li>
+							<li class="fragment">Install node by clicking on a button</li>
+							<li class="fragment">Install the grunt cli: <pre><code>$ npm install -g grunt-cli</code></pre></li>
+							<li class="fragment">Install ruby via a ruby version manager if you need to:
+								<pre><code>$ \curl -sSL https://get.rvm.io | bash -s stable —ruby</code></pre>
+							</li>
 						</ol>
 					</section>
 
@@ -302,37 +314,157 @@
 
 				<section>
 					<section>
-						<h4>Once node and grunt are installed, you're already set up to <em>consume</em> many workflows.</h4>
+						<h4>Once node and grunt are installed, you're already set up to <em class="fragment highlight-cloudfour">consume</em> many workflows.</h4>
 					</section>
 
 					<section>
-						<h3>The Weird</h3>
-						<h4>What does it <span class="fragment highlight-cloudfour">do</span>?</h4>
-				  </section> 
+						<h3>That's super and all</h3>
+						<h4 class="fragment">But what does it <span class="fragment highlight-cloudfour">do</span>?</h4>
+					</section>
 
 					<section>
-						<img src="assets/reveal-instructions.png" alt="Reveal instructions">
 						<h4>Let's get self-referential</h4>
-						<h3>The basic workflow for running reveal.js</h3>
+						<h3>The workflow for reveal.js</h3>
+						<img src="assets/reveal-instructions.png" alt="Reveal instructions">
+						<p><small><a href="https://github.com/hakimel/reveal.js/blob/master/README.md">reveal.js / README.md</a></small></p>
 					</section>
 
 					<section>
+						<h3>Working with reveal.js</h3>
+						<ul>
+							<li class="fragment">Compile SASS for themes</li>
+							<li class="fragment">Minify CSS</li>
+							<li class="fragment">Clean up/check JavaScript (linting)</li>
+							<li class="fragment">Build and package presentation as an archive</li>
+							<li class="fragment">Run the presentation on a local web server</li>
+							<li class="fragment">Run automated tests</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>The contributors to reveal.js defined <span class="fragment highlight-cloudfour">grunt tasks</span>to take care of all of these workflow components.</p>
+						<ul>
+							<li class="fragment">Saves us time and headache—it's
+								really easy to get up and running (less suck)!</li>
+							<li class="fragment">Helps ensure that contributing users are building, packaging,
+								testing and optimizing their code in the same way (more consistency).</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>So that is what it does</h3>
+						<h4 class="fragment">Less suck</h4>
+						<h4 class="fragment">More consistency</h4>
+					</section>
+
+					<section>
+						<h3>We're ready to go</h3>
 						<img src="assets/reveal-instructions-2.png" alt="Reveal instructions">
 					</section>
 
 					<section data-background="#262822">
+						<h3>Using defined grunt workflows</h3>
 						<ol>
 							<li class="fragment">Clone repository</li>
-							<li class="fragment">(npm) install dependencies</li>
+							<li class="fragment">npm install</li>
 							<li class="fragment">Run tasks</li>
 						</ol>
 					</section>
 
 					<section data-background="#262822">
-						<h3>Run Tasks</h3>
-						<h4>The beating heart of many modern workflows</h4>
+						<h3>Using reveal.js' grunt workflow</h3>
+							<pre><code data-trim>
+$ git clone git@github.com:hakimel/reveal.js.git
+$ cd reveal.js
+$ npm install
+$ grunt [task]
+							</pre></code>
+					</section>
+
+
+					<section data-background="#262822">
+						<h3>Tasks defined for reveal.js</h3>
+						<pre class="fragment"><code>default</pre></code>
+						<pre class="fragment"><code>serve</pre></code>
+						<pre class="fragment"><code>themes</pre></code>
+						<pre class="fragment"><code>package</pre></code>
+						<pre class="fragment"><code>test</pre></code>
+					</section>
+
+					<section data-background="#262822">
+						<pre><code>$ grunt serve</code></pre>
+						<aside class="notes">
+							<ul>
+								<li>Runs a simple, static web server</li>
+								<li>Watches SCSS source files; compiles them when changed</li>
+								<li>Watches JS source files; runs the <pre>default</pre> task on change</li>
+							</ul>
+						</aside>
+					</section>
+
+			</section>
+
+			<section>
+
+				<section>
+					<h2>How?</h2>
+				</section>
+
+				<section>
+					<h4>Grunt = Gruntfile + package.json + grunt-cli</h4>
+					<aside class="notes">Use photo of distilled oil, like a formula</aside>
+				</section>
+
+					<section data-background="#262822">
+						<pre><code>$ grunt [task]</code></pre>
+					</section>
+
+
+					<section>
+						<h3>Gruntfile</h3>
+						<ul>
+							<li class="fragment">Configure and define ("register") grunt tasks</li>
+							<li class="fragment">Load the needed grunt plugins for your tasks</li>
+						</ul>
+					</section>
+
+					<section data-background="#262822">
+						<h3>Gruntfile</h3>
+						<h5>Define ("register") grunt tasks</h5s>
 						<img src="assets/grunt-tasks.png" alt="Grunt tasks">
 						<p><small>gruntfile.js</small></p>
+					</section>
+
+					<section data-background="#262822">
+						<h3>Gruntfile</h3>
+						<h5>Configure grunt tasks</h5s>
+						<img src="assets/configure-task.png" alt="Grunt tasks">
+						<p><small>gruntfile.js</small></p>
+						<p><small><em>See <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch documentation</a></em></small></p>
+					</section>
+
+
+					<section>
+						<h3>package.json</h3>
+						<ul>
+							<li class="fragment">JSON data of project module metadata</li>
+							<li class="fragment">Includes <pre><code>devDependencies</code></pre> for grunt</li>
+							<li class="fragment">Those dependencies get installed when you run <pre><code>$ npm install</code></pre></li>
+						</ul>
+					</section>
+
+
+					<section data-background="#262822">
+						<img src="assets/package-json.png" alt="package.json">
+						<p><small>package.json</small></p>
+					</section>
+
+					<section data-background="#262822">
+						<ol>
+							<li class="fragment">Clone repository</li>
+							<li class="fragment">npm install (package.json)</li>
+							<li class="fragment">$ grunt [task] (gruntfile.js)</li>
+						</ol>
 					</section>
 
 				  <section>
@@ -347,6 +479,11 @@
 				  
 				  <section>
 				  	<h4>A good workflow brings joy to your team by emphasizing the "yay" moments and de-emphasizing the misery</h4>
+				  </section>
+
+				  <section>
+				  	<h2 class="fragment">More consistency</h2>
+				  	<h2 class="fragment">Less suck</h2>
 				  </section>
 				</section>
 
