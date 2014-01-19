@@ -50,6 +50,9 @@
   border-radius: 0.125em;
   transition: all 250ms ease-out; }
 
+.reveal a em, .reveal em a {
+  color: #ff5f25 !important; }
+
 .reveal .citation {
   display: block;
   font-size: 0.85em;
@@ -86,7 +89,9 @@
 .reveal h2 {
   font-size: 1.75em; }
 
-.reveal [data-background] h1, .reveal [data-background] h2, .reveal [data-background] h3, .reveal [data-background] h4, .reveal [data-background] blockquote, .reveal [data-background] ul, .reveal [data-background] li {
+.reveal [data-background] h1, .reveal [data-background] h2, .reveal [data-background] h3,
+.reveal [data-background] h4, .reveal [data-background] h5, .reveal [data-background] blockquote,
+.reveal [data-background] ul, .reveal [data-background] li, .reveal [data-background] p {
   padding: 0.25em;
   background-color: rgba(0, 0, 0, 0.6); }
 
