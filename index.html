@@ -60,7 +60,9 @@
 					</section>
 
 					<section>
-						<h4>I committed a directory called <pre><code>htdogs</code></pre> to our CVS repository at work</h4>
+						<h5>I committed a directory called </h5>
+							<p><em>HTDOGS</em></p>
+						<h5>to our CVS repository at work</h5>
 						<aside class="notes">That year, I also...</aside>
 					</section>
 
@@ -71,7 +73,7 @@
 
 					<section>
 						<h3>HTTP + </h3>
-						<h4 class="fragment">Dogs?</h4>
+						<h4 class="fragment"><em>Dogs?</em></h4>
 						<img class="fragment" src="assets/small-dog.jpg" alt="Dogs?">
 						<aside class="notes">Whut?</aside>
 					</section>
@@ -89,18 +91,18 @@
 					</section>
 
 					<section data-background="assets/sunrise.jpg">
-						<h3>This is not how I felt</h3>
+						<h3>This is <em>not</em> how I felt</h3>
 						<aside class="notes">The way I felt was the opposite of this</aside>
 					</section>
 
 					<section data-background="assets/storm.jpg">
-						<h3>This is how I felt</h3>
+						<h3><em>This</em> is how I felt</h3>
 						<aside class="notes">Yes, more like this</aside>
 					</section>
 
 					<section data-background="assets/brittle.jpg">
 						<h3>CVS: Weird, brittle, Byzantine</h3>
-						<aside class="notes">CVS is weird and brittle enough on its own, and renaming committed directories infuriating and Byzantine.
+						<aside class="notes">CVS is weird and brittle enough on its own, and renaming committed directories infuriating and Byzantine.</aside>
 					</section>
 
 					<section data-background="assets/complicated.jpg">
@@ -109,7 +111,8 @@
 					  of our workflow that I didn't understand, and which scared me.</aside>
 					</section>
 
-					<section data-background="assets/temple.jpg">
+					<section data-background="assets/temple.jpg" data-center="false">
+						<h4>the mysterious temple of the sysadmin</h4>
 						<aside class="notes">I approached the desk of our arch-sysadmin, which was 
 							pretty much like approaching a mysterious temple.
 						</aside>
@@ -120,11 +123,6 @@
 						<img class="fragment" src="assets/excuse-me.jpg" alt="excuse me" style="max-height:400px">
 					</section>
 
-					<section>
-						<img src="assets/absolut.jpg" alt="Sysadmin Water Bottle">
-						<aside class="notes">I mean, here's this guy's water bottle</aside>
-					</section>
-
 					<section data-background="assets/matrix.gif">
 						<aside class="notes">It was pretty much like this, from my perspective.
 							Not a world I understood.</aside>
@@ -133,10 +131,12 @@
 
 					<section>
 						<img src="assets/defcon-2.png">
+						<h4>The frenzy that ensued felt about like DEFCON 2</h4>
 						<aside class="notes">And the frenzy that ensued was something like DEFCON 2</aside>
 					</section>
 
 					<section>
+						<h4>The experience left me wary</h4>
 						<img src="assets/scarred.jpg" alt="Left me scarred and timid">
 						<aside class="notes">The experience left me scarred and timid, wary
 							of what seemed like arcane rocket science.</aside>
@@ -487,6 +487,80 @@ $ grunt [task]
 				  </section>
 				</section>
 
+				<section>
+					<section>
+						<h2>Less Wary, More Confident</h2>
+					</section>
+
+					<section>
+						<h3>I'm a n00b, too</h3>
+						<aside class="notes">I am in no way an expert at the things I'm talking about today.</aside>
+					</section>
+
+					<section>
+						<h3>And that's why I'm here</h3>
+					</section>
+
+					<section>
+						<h4>I wasn't a sysadmin then; I'm not in devOps now</h4>
+					</section>
+
+					<section>
+						<h4>These kinds of workflows give us a common vernacular to use within our teams and when collaborating outside of our day-to-day teams</h4>
+					</section>
+
+			  </section>
+
+			  <section>
+
+					<section>
+						<h2>Here's why you <span class="fragment highlight-cloudfour">can</span> do it</h2>
+					</section>
+
+					<section>
+						<h3>There are different levels</h3>
+					</section>
+
+					<section>
+						<h3>It's easier now</h3>
+					</section>
+
+					<section>
+						<h3>A lot of other people are doing it</h3>
+					</section>
+
+					<section>
+						<h3>A lot of other people are <em>talking</em> about it</h3>
+					</section>
+
+					<section>
+						<h3>Devil's Advocate</h3>
+						<blockquote>But I don't know JavaScript or JSON</blockquote>
+					</section>
+
+					<section>
+						<h3>Devil's Advocate</h3>
+						<blockquote>But I don't understand git or version control</blockquote>
+					</section>
+
+					<section>
+						<h3>Devil's Advocate</h3>
+						<blockquote>But I don't know where to start with gruntfiles</blockquote>
+					</section>
+
+					<section>
+						<h3>Devil's Advocate</h3>
+						<blockquote>But other people on my team can't handle it</blockquote>
+					</section>
+
+					<section>
+						<h3>Devil's Advocate</h3>
+						<blockquote>But what about gulp.js? Bower? The other stuff you mentioned?</blockquote>
+					</section>
+
+				</section>
+
+
 			</div>
 
 		</div>
@@ -525,7 +599,20 @@ $ grunt [task]
 					}
 				}
 			});
-
+(function() {
+	// Allow the enabling/disabling of vertical centering on a per-slide basis via
+	// the data-center attr
+	var lastCentered = null;
+	Reveal.addEventListener( 'slidechanged', function( event ) {
+		var centered = event.currentSlide.getAttribute('data-center') || true;
+		if (centered === 'false') centered = false;
+		if (lastCentered != centered) {
+			Reveal.configure({ center: centered });
+		}
+		lastCentered = centered;
+	    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+	} );
+})();
 
 		</script>
 

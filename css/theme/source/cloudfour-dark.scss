@@ -84,6 +84,16 @@ $selectionColor: #fff;
 .reveal blockquote:after {
   content: '\201D';
 }
+
+.reveal em {
+  color: #ff5f25;
+  background-color: rgba(#fff, 1);
+  padding: 0 .5em;
+  text-shadow: none;
+  border-radius: 0.125em;
+  transition: all 250ms ease-out;
+}
+
 // .reveal blockquote cite,
 .reveal .citation {
   display: block;
@@ -134,12 +144,6 @@ $selectionColor: #fff;
   //@include radial-gradient( rgba(85,90,95,1), rgba(28,30,32,.5) );
 //}
 
-// OTA-specific styles
-// Bottom-aligned content specific to this presentation
-//.reveal section.present {
-//   bottom: 200px;
-//}
-
 .reveal h2 {
   font-size: 1.75em;
 }
@@ -148,6 +152,7 @@ $selectionColor: #fff;
   padding: 0.25em;
   background-color: rgba(0,0,0,.6);
 }
+
 
 // Theme template ------------------------------
 @import "../template/theme";
