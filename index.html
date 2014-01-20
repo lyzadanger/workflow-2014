@@ -315,8 +315,8 @@
 					</section>
 
 					<section data-background="assets/clear.jpg">
-						<h4>But you don't have to <em>know</em> the underlying technologies</h4>
-						<h5>Do you have five minutes?</h5>
+						<h4>But you don't have to <span class="fragment highlight-cloudfour">know</span> the underlying technologies</h4>
+						<h5 class="fragment">Do you have five minutes?</h5>
 					</section>
 
 					<section data-background="#46483e">
@@ -325,7 +325,7 @@
 					</section>
 
 					<section data-background="#ffffff">
-						<h3>Node Package Manager</h3>
+						<h3 class="fragment">Node Package Manager</h3>
 						<h4 class="fragment">Install NPM!</h4>
 						<img class="fragment" src="assets/super-easy-install.png" alt="more than easy">
 						<aside class="notes">Psych! NPM is already installed; it comes with node!</aside>
@@ -368,6 +368,7 @@
 					<section data-background="assets/toss.jpg">
 						<h2 class="fragment">That's super and all</h2>
 						<h3 class="fragment">But what does it <span class="fragment highlight-cloudfour">do</span>?</h3>
+						<h4 class="fragment">...Let's look at an example</h4>
 						<aside class="notes">It's great that we're set up to run tasks, but what can
 							we <em>do</em> with this setup? We're technically set, but still in the abstract
 						  as far as what an orchestrated workflow can do for us.</aside>
@@ -429,7 +430,37 @@
 						</ol>
 					</section>
 
-					<section data-background="#262822">
+					<section data-background="#262822" data-transition="none">
+						<h3>Using reveal.js' grunt workflow</h3>
+							<pre><code data-trim>
+$ git clone git@github.com:hakimel/reveal.js.git
+
+
+
+							</pre></code>
+					</section>
+
+					<section data-background="#262822" data-transition="none">
+						<h3>Using reveal.js' grunt workflow</h3>
+							<pre><code data-trim>
+$ git clone git@github.com:hakimel/reveal.js.git
+$ cd reveal.js
+
+
+							</pre></code>
+					</section>
+
+					<section data-background="#262822" data-transition="none">
+						<h3>Using reveal.js' grunt workflow</h3>
+							<pre><code data-trim>
+$ git clone git@github.com:hakimel/reveal.js.git
+$ cd reveal.js
+$ npm install
+
+							</pre></code>
+					</section>
+
+					<section data-background="#262822" data-transition="none">
 						<h3>Using reveal.js' grunt workflow</h3>
 							<pre><code data-trim>
 $ git clone git@github.com:hakimel/reveal.js.git
@@ -473,7 +504,7 @@ $ grunt [task]
 
 				<section data-background="#262822">
 					<h3>How do we get to here?</h3>
-					<pre><code>$ grunt [task]</code></pre>
+					<pre class="fragment"><code>$ grunt [task]</code></pre>
 					<aside class="notes">What did the creators of the grunt workflow for reveal.js 
 						do to get to the point where `$grunt [task]` executed tasks relevant to the project?</aside>
 				</section>
@@ -489,7 +520,7 @@ $ grunt [task]
 				</section>
 
 					<section data-background="assets/freedom.jpg">
-						<h3>Gruntfile</h3>
+						<h3>1. Gruntfile</h3>
 						<ol>
 							<li class="fragment">Define ("register") grunt tasks</li>
 							<li class="fragment">Configure tasks</li>
@@ -499,30 +530,30 @@ $ grunt [task]
 
 
 					<section data-background="#262822">
-						<h3>Gruntfile</h3>
+						<h3>1. Gruntfile</h3>
 						<h5>Define ("register") grunt tasks</h5>
-						<pre><code data-trim>
-// Default task
-grunt.registerTask('default', ['jshint', 'cssmin', 'uglify', 'qunit']);
+						<pre><code data-trim data-noescape>
+<span class="fragment">// Default task
+grunt.registerTask(</span><span class="fragment">'default'</span><span class="fragment">, ['jshint', 'cssmin', 'uglify', 'qunit']);</span>
 
-// Theme task
-grunt.registerTask('themes', ['sass']);
+<span class="fragment">// Theme task
+grunt.registerTask(</span><span class="fragment">'themes'</span><span class="fragment">, ['sass']);</span>
 
-// Package presentation to archive
-grunt.registerTask('package', [ 'default', 'zip']);
+<span class="fragment">// Package presentation to archive
+grunt.registerTask(</span><span class="fragment">'package'</span><span class="fragment">, [ 'default', 'zip']);</span>
 
-// Serve presentation locally
-grunt.registerTask('serve', ['connect', 'watch'] );
+<span class="fragment">// Serve presentation locally
+grunt.registerTask(</span><span class="fragment">'serve'</span><span class="fragment">, ['connect', 'watch'] );</span>
 
-// Run tests
-grunt.registerTask('test',[ 'jshint', 'qunit']);
+<span class="fragment">// Run tests
+grunt.registerTask(</span><span class="fragment">'test'</span><span class="fragment">,[ 'jshint', 'qunit']);</span>
 						</code></pre>
 						<p><small>gruntfile.js</small></p>
 					</section>
 
 
 					<section data-background="#262822">
-						<h3>Gruntfile</h3>
+						<h3>1. Gruntfile</h3>
 						<h5>Configure grunt tasks</h5>
 						<pre><code data-trim>
 watch: {
@@ -541,7 +572,7 @@ watch: {
 					</section>
 
 					<section data-background="#262822">
-						<h3>Gruntfile</h3>
+						<h3>1. Gruntfile</h3>
 						<h5>Load grunt plugins/dependencies</h5>
 						<pre><code data-trim>
 grunt.loadNpmTasks( 'grunt-contrib-qunit' );
@@ -558,7 +589,7 @@ grunt.loadNpmTasks( 'grunt-zip' );
 
 
 					<section data-background="assets/box.jpg">
-						<h3>package.json</h3>
+						<h3>2. package.json</h3>
 						<ul>
 							<li class="fragment">JSON data of project module metadata</li>
 							<li class="fragment">Includes <pre><code>devDependencies</code></pre> for grunt</li>
@@ -568,6 +599,7 @@ grunt.loadNpmTasks( 'grunt-zip' );
 
 
 					<section data-background="#262822">
+						<h3>2. package.json</h3>
 						<pre><code data-trim>
 {
   "name": "reveal.js",
