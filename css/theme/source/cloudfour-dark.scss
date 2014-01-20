@@ -19,6 +19,7 @@ $linkColor: #fff;
 $linkColorHover: rgba(#fff, 0.6);
 $selectionBackgroundColor: desaturate(darken(#709ad0, 25%), 10%);
 $selectionColor: #fff;
+$monospaceFont: 'Inconsolata', 'Andale Mono', 'Monaco', monospace;
 
 // Body background with SVG clouds and gradient
 @mixin cloudFourBackgroundImage($outer, $inner) {
@@ -111,9 +112,14 @@ $selectionColor: #fff;
   content: '— ';
 }
 
+.reveal pre, .reveal code, .reveal pre code {
+  font-family: $monospaceFont;
+}
 // Code output
 .reveal pre code {
-  background-color: rgba(#000, 0.6);
+  background-color: rgba(#000000, 0.6);
+  font-size: 0.9em;
+  border: 4px solid #eeeeee;
 }
 
 // Custom highlight style
@@ -170,4 +176,46 @@ $selectionColor: #fff;
 // Progress bar color
 .reveal .progress {
   background-color: rgba(#fff, 0.2);
+}
+
+// Syntax highlight
+/* Tomorrow Night Bright Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+  color: #969896;
+}
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: #d54e53;
+}
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: #e78c45;
+}
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: #e7c547;
+}
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: #b9ca4a;
+}
+
+.tomorrow-aqua, pre .css .hexcolor {
+  color: #70c0b1;
+}
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: #7aa6da;
+}
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+  color: #c397d8;
+}
+
+pre code {
+  display: block;
+  color: #eaeaea;
+
 }

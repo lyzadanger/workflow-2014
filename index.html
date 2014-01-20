@@ -44,7 +44,7 @@
 						<small>Made by Lyza Danger Gardner / <a href="https://twitter.com/lyzadanger">@lyzadanger</a></small>
 					</p>
 				</section>
-
+<!-- 1 -->
 				<section>
 					<section>
 						<h2>1999</h2>
@@ -149,11 +149,12 @@
 
 			  </section>
 
+<!-- 2 -->
+
 			  <section>
 			  	<section>
 			  		<h2>The Times, They've Changed</h2>
 			  	</section>
-
 
 			  	<section data-background="assets/back-then.jpg">
 			  		<h3>Back then</h3>
@@ -204,10 +205,20 @@
 			  	</section>
 			  </section>
 
+<!-- 3 -->
+
 			  <section>
 			  	<section>
 				  	<h2>What is a "workflow" and why do I need one?</h2>
-				  	<h5 class="fragment">...and maybe the whole thing makes me a little bit scared</h5>
+				  </section>
+
+				  <section data-background="assets/elements.jpg">
+				  	<h3>You Likely already have Existing Elements</h3>
+				  	<ul>
+				  		<li class="fragment">Reusable structures and configuration</li>
+				  		<li class="fragment">Consistent processes</li>
+				  		<li class="fragment">Individual tools</li>
+				  	</ul>
 				  </section>
 
 				  <section data-background="assets/piano.jpg">
@@ -216,9 +227,18 @@
 				  	<citation>&mdash;me</citation>
 				  </section>
 
+				  <section data-background="#000000">
+				  	<h2>Consistent</h2>
+				  	<aside class="notes">Across your team, across multiple teams, across environments</aside>
+				  </section>
 
-				 	<section>
-				 		<h2>Popular tools for orchestrating workflows</h2>
+				  <section data-background="#000000">
+				  	<h2>Less Sucky</h2>
+				  	<aside class="notes">We get our jobs done quicker, more elegantly and without as much drudgery.</aside>
+				  </section>
+
+				 	<section data-background="assets/coordination.jpg">
+				 		<h2 class="fragment">Orchestration and Coordination</h2>
 				 	</section>
 
 				 	<section data-background="assets/abstract.jpg">
@@ -261,8 +281,9 @@
 				  	<img src="assets/grunt.png" alt="grunt">
 				  </section>
 
-
 				</section>
+
+<!-- 4 -->
 
 				<section>
 
@@ -287,7 +308,15 @@
 
 					<section data-background="assets/german-clock.jpg">
 						<h3>Solving the "Hard"</h3>
-						<h4 class="fragment">Do you have five minutes?</h4>
+					</section>
+
+					<section data-background="assets/hazy.jpg">
+						<h3>The technical requirements may seem hazy</h3>
+					</section>
+
+					<section data-background="assets/clear.jpg">
+						<h4>But you don't have to <em>know</em> the underlying technologies</h4>
+						<h5>Do you have five minutes?</h5>
 					</section>
 
 					<section data-background="#46483e">
@@ -296,8 +325,10 @@
 					</section>
 
 					<section data-background="#ffffff">
-						<h3>Install NPM!</h3>
+						<h3>Node Package Manager</h3>
+						<h4 class="fragment">Install NPM!</h4>
 						<img class="fragment" src="assets/super-easy-install.png" alt="more than easy">
+						<aside class="notes">Psych! NPM is already installed; it comes with node!</aside>
 					</section>
 
 					<section data-background="#e48632">
@@ -307,14 +338,14 @@
 					</section>
 
 					<section data-background="#8b1417">
-						<h3>Install Ruby?</h3>
+						<h3>Install Ruby and a Ruby Version Manager?</h3>
 						<p class="fragment">Possibly not...</p>
 						<pre><code>$ \curl -sSL https://get.rvm.io | bash -s stable —ruby</code></pre>
 						<p class="fragment">One liner: Installs RVM, installs stable ruby</p>
 					</section>
 
 					<section data-background="assets/steps.jpg">
-						<h3>Once more, with feeling</h3>
+						<h3>A recap: Once more, with feeling</h3>
 						<ol>
 							<li class="fragment">Install node by clicking on a button</li>
 							<li class="fragment">Install the grunt cli: <pre><code>$ npm install -g grunt-cli</code></pre></li>
@@ -325,24 +356,30 @@
 					</section>
 
 					<section data-background="assets/open.jpg">
-						<h4>Once node and grunt are installed, you're already set up to <em class="fragment highlight-cloudfour">consume</em> many workflows.</h4>
+						<h4>Once node and the grunt CLI are installed, you're already set up to <em class="fragment highlight-cloudfour">consume</em> many workflows.</h4>
 					</section>
 
-
 				</section>
+
+<!-- 5 -->
 
 				<section>
 
 					<section data-background="assets/toss.jpg">
-						<h2>That's super and all</h2>
+						<h2 class="fragment">That's super and all</h2>
 						<h3 class="fragment">But what does it <span class="fragment highlight-cloudfour">do</span>?</h3>
+						<aside class="notes">It's great that we're set up to run tasks, but what can
+							we <em>do</em> with this setup? We're technically set, but still in the abstract
+						  as far as what an orchestrated workflow can do for us.</aside>
+
 					</section>
 
 					<section>
-						<h4>Let's get self-referential</h4>
+						<h4>The example in front of us</h4>
 						<h3>The workflow for reveal.js</h3>
 						<img src="assets/reveal-instructions.png" alt="Reveal instructions">
 						<p><small><a href="https://github.com/hakimel/reveal.js/blob/master/README.md">reveal.js / README.md</a></small></p>
+						<aside class="notes">As an example, the grunt-based workflow for reveal.js</aside>
 					</section>
 
 					<section data-background="assets/working.jpg">
@@ -402,16 +439,6 @@ $ grunt [task]
 							</pre></code>
 					</section>
 
-
-					<section data-background="#262822">
-						<h3>Tasks defined for reveal.js</h3>
-						<pre class="fragment"><code>default</pre></code>
-						<pre class="fragment"><code>serve</pre></code>
-						<pre class="fragment"><code>themes</pre></code>
-						<pre class="fragment"><code>package</pre></code>
-						<pre class="fragment"><code>test</pre></code>
-					</section>
-
 					<section data-background="#262822">
 						<pre><code>$ grunt serve</code></pre>
 						<aside class="notes">
@@ -423,47 +450,110 @@ $ grunt [task]
 						</aside>
 					</section>
 
+					<section data-background="#262822">
+						<h3>Tasks defined for reveal.js</h3>
+						<pre class="fragment"><code>default</pre></code>
+						<pre class="fragment"><code>serve</pre></code>
+						<pre class="fragment"><code>themes</pre></code>
+						<pre class="fragment"><code>package</pre></code>
+						<pre class="fragment"><code>test</pre></code>
+					</section>
+
 			</section>
+
+<!-- 6 -->
 
 			<section>
 
 				<section>
 					<h2>How?</h2>
+					<aside class="notes">So that's how you use a pre-defined grunt workflow. But
+						you may be wondering <em>how</em> the grunt tasks are set up in the first place.</aside>
+				</section>
+
+				<section data-background="#262822">
+					<h3>How do we get to here?</h3>
+					<pre><code>$ grunt [task]</code></pre>
+					<aside class="notes">What did the creators of the grunt workflow for reveal.js 
+						do to get to the point where `$grunt [task]` executed tasks relevant to the project?</aside>
 				</section>
 
 				<section data-background="#262822">
 					<h3>Grunt =</h3>
-					<h4>Gruntfile + package.json + grunt-cli</h4>
+					<h4><span class="fragment">Gruntfile</span>
+					<span class="fragment">+</span>
+					<span class="fragment">package.json</span>
+					<span class="fragment">+</span>
+					<span class="fragment">grunt-cli</span></h4>
 					<aside class="notes">Use photo of distilled oil, like a formula</aside>
 				</section>
 
-					<section data-background="#262822">
-						<h3>How do we get to here?</h3>
-						<pre><code>$ grunt [task]</code></pre>
-					</section>
-
-
 					<section data-background="assets/freedom.jpg">
 						<h3>Gruntfile</h3>
-						<ul>
-							<li class="fragment">Configure and define ("register") grunt tasks</li>
+						<ol>
+							<li class="fragment">Define ("register") grunt tasks</li>
+							<li class="fragment">Configure tasks</li>
 							<li class="fragment">Load the needed grunt plugins for your tasks</li>
-						</ul>
+						</ol>
+					</section>
+
+
+					<section data-background="#262822">
+						<h3>Gruntfile</h3>
+						<h5>Define ("register") grunt tasks</h5>
+						<pre><code data-trim>
+// Default task
+grunt.registerTask('default', ['jshint', 'cssmin', 'uglify', 'qunit']);
+
+// Theme task
+grunt.registerTask('themes', ['sass']);
+
+// Package presentation to archive
+grunt.registerTask('package', [ 'default', 'zip']);
+
+// Serve presentation locally
+grunt.registerTask('serve', ['connect', 'watch'] );
+
+// Run tests
+grunt.registerTask('test',[ 'jshint', 'qunit']);
+						</code></pre>
+						<p><small>gruntfile.js</small></p>
+					</section>
+
+
+					<section data-background="#262822">
+						<h3>Gruntfile</h3>
+						<h5>Configure grunt tasks</h5>
+						<pre><code data-trim>
+watch: {
+  main: {
+    files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
+    tasks: 'default'
+	},
+  theme: {
+    files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
+    tasks: 'themes'
+  }
+}
+						</code></pre>
+						<p><small>gruntfile.js<br />
+						<em>See <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch documentation</a></em></small></p>
 					</section>
 
 					<section data-background="#262822">
 						<h3>Gruntfile</h3>
-						<h5>Define ("register") grunt tasks</h5s>
-						<img src="assets/grunt-tasks.png" alt="Grunt tasks">
+						<h5>Load grunt plugins/dependencies</h5>
+						<pre><code data-trim>
+grunt.loadNpmTasks( 'grunt-contrib-qunit' );
+grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+grunt.loadNpmTasks( 'grunt-contrib-watch' );
+grunt.loadNpmTasks( 'grunt-contrib-sass' );
+grunt.loadNpmTasks( 'grunt-contrib-connect' );
+grunt.loadNpmTasks( 'grunt-zip' );
+						</code></pre>
 						<p><small>gruntfile.js</small></p>
-					</section>
-
-					<section data-background="#262822">
-						<h3>Gruntfile</h3>
-						<h5>Configure grunt tasks</h5s>
-						<img src="assets/configure-task.png" alt="Grunt tasks">
-						<p><small>gruntfile.js</small></p>
-						<p><small><em>See <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch documentation</a></em></small></p>
 					</section>
 
 
@@ -478,7 +568,26 @@ $ grunt [task]
 
 
 					<section data-background="#262822">
-						<img src="assets/package-json.png" alt="package.json">
+						<pre><code data-trim>
+{
+  "name": "reveal.js",
+  "version": "2.6.1",
+  "description": "The HTML Presentation Framework",
+  "homepage": "http://lab.hakim.se/reveal-js",
+  "subdomain": "revealjs",
+  "devDependencies": {
+    "grunt-contrib-qunit": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-connect": "~0.4.1",
+    "grunt-zip": "~0.7.0",
+    "grunt": "~0.4.0"
+  }
+}
+						</pre></code>					
 						<p><small>package.json</small></p>
 					</section>
 
@@ -581,6 +690,7 @@ $ grunt [task]
 							<li class="fragment">It's easier now</li>
 							<li class="fragment">A lot of people like you are doing it, too</li>
 						</ul>
+						<aside class="notes">Getting easier all the time, e.g. npm comes with node.</aside>
 					</section>
 
 			  </section>
