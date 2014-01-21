@@ -47,7 +47,7 @@
 <!-- 1 -->
 				<section>
 					<section>
-						<h2>1999</h2>
+						<h2 class="fragment grow">1999</h2>
 						<aside class="notes">I remember 1999.</aside>
 					</section>
 
@@ -61,8 +61,8 @@
 
 					<section>
 						<h5>I committed a directory called </h5>
-							<p><em>HTDOGS</em></p>
-						<h5>to our CVS repository at work</h5>
+							<h6 class="fragment"><em>HTDOGS</em></h6>
+						<h5 class="fragment">to our CVS repository at work</h5>
 						<aside class="notes">That year, I also...</aside>
 					</section>
 
@@ -73,7 +73,7 @@
 
 					<section>
 						<h3>HTTP + </h3>
-						<h4 class="fragment"><em>Dogs?</em></h4>
+						<h5 class="fragment"><em>Dogs?</em></h5>
 						<img class="fragment" src="assets/small-dog.jpg" alt="Dogs?">
 						<aside class="notes">Whut?</aside>
 					</section>
@@ -86,6 +86,7 @@
 					</section>
 
 					<section>
+						<h4>Major screwup</h4>
 						<img src="assets/kaboof.jpg" alt="Kaboof!">
 						<aside class="notes">Whoops.</aside>
 					</section>
@@ -137,7 +138,7 @@
 
 					<section>
 						<h4>The experience left me wary</h4>
-						<img src="assets/scarred.jpg" alt="Left me scarred and timid">
+						<img src="assets/scarred.jpg" alt="Left me scarred and timid" style="max-height:400px">
 						<aside class="notes">The experience left me scarred and timid, wary
 							of what seemed like arcane rocket science.</aside>
 					</section>
@@ -152,41 +153,41 @@
 <!-- 2 -->
 
 			  <section>
-			  	<section>
-			  		<h2>The Times, They've Changed</h2>
+			  	<section data-background="assets/clock.jpg">
+			  		<h2>Time Passed</h2>
 			  	</section>
 
 			  	<section data-background="assets/back-then.jpg">
 			  		<h3>Back then</h3>
 			  		<ul>
-			  			<li class="fragment">We, the engineers;</li>
-			  			<li class="fragment">Wrote code and markup;</li>
-			  			<li class="fragment">Carefully committed to CVS;</li>
-			  			<li class="fragment">Using commands from the sysadmins;</li>
+			  			<li class="fragment">We, the engineers</li>
+			  			<li class="fragment">Wrote code and markup</li>
+			  			<li class="fragment">Carefully committed to CVS</li>
+			  			<li class="fragment">Using commands from the sysadmins</li>
 			  			<li class="fragment">And then...we were done?</li>
 			  		</ul>
 			  	</section>
 
-			  	<section data-background="assets/clock.jpg">
-			  		<aside class="notes">Since then...</aside>
-			  		</aside>
-			  	</section>
-
 			  	<section data-background="assets/embark.jpg">
-			  		<h3>We embarked on a web journey</h3>
+			  		<h3>We're on a web journey</h3>
+			  		<h5 class="fragment">Lots has happened since</h5>
 			  		<aside class="notes">Our roles evolved</aside>
 			  	</section>
 
 			  	<section data-background="assets/developers.jpg">
-			  		<h4>The word <em>developer</em> entered our lexicon</h4>
-			  		<aside class="notes">This feels so much more natural than "engineer", and it implies a subtly different and broader scope.</aside>
+			  		<h4>The word <span class="fragment highlight-cloudfour">developer</span> entered our lexicon</h4>
+			  		<aside class="notes">Suddenly we had a new term to describe the breath of what we did. This feels so much more natural than "engineer", and it implies a subtly different and broader scope.</aside>
+			  	</section>
+
+			  	<section data-background="assets/devices.jpg">
+			  		<h4>Functionality pushed toward the <span class="fragment highlight-cloudfour">front end</span></h4>
 			  	</section>
 
 			  	<section data-background="assets/separation.jpg">
 			  		<h3>Less separation of concerns</h3>
 			  		<aside class="notes">Web development has democratized.
 			  			There are still large teams that have such clear distinctions, but,
-			  			for the most part, there isn't such clear separation of concerns. We've become generalists.</aside>
+			  			for the most part, there isn't such clear separation of concerns. We've become a tribe of generalists, responsible for ever-larger swaths of what we're building.</aside>
 			  	</section>
 
 			  	<section>
@@ -196,12 +197,17 @@
 			  			into the temple and forget about it.</aside>
 			  	</section>
 
-			  	<section>
+			  	<section data-background="assets/leap.jpg">
 			  		<h4>Instead, we are increasingly expected to take charge</h4>
+			  		<h5 class="fragment">...of our workflow destiny</h5>
 			  	</section>
 
 			  	<section data-background="assets/worried.jpg">
 			  		<h4>But...the wariness...<span class="fragment">the vagueness</span></h4>
+			  		<aside class="notes">There's still a residual wariness—in me, in the people
+			  			around me—an awe or concern about the technical aspects, as well as
+			  			a confusion about the high-level, abstract concepts involved, the vagueness
+			  			of orchestrating workflows.</aside>
 			  	</section>
 			  </section>
 
@@ -212,8 +218,12 @@
 				  	<h2>What is a "workflow" and why do I need one?</h2>
 				  </section>
 
+				  <section data-background="assets/discrete.jpg">
+				  	<h4>A workflow involves <span class="fragment highlight-cloudfour">components</span> and <span class="fragment highlight-cloudfour">processes</span></h4>
+				  </section>
+
 				  <section data-background="assets/elements.jpg">
-				  	<h3>You Likely already have Existing Elements</h3>
+				  	<h3 class="fragment">You Likely already have Existing Elements</h3>
 				  	<ul>
 				  		<li class="fragment">Reusable structures and configuration</li>
 				  		<li class="fragment">Consistent processes</li>
@@ -227,22 +237,22 @@
 				  	<citation>&mdash;me</citation>
 				  </section>
 
-				  <section data-background="#000000">
+				  <section data-background="#000000" data-transition="fade">
 				  	<h2>Consistent</h2>
 				  	<aside class="notes">Across your team, across multiple teams, across environments</aside>
 				  </section>
 
-				  <section data-background="#000000">
+				  <section data-background="#000000" data-transition="fade">
 				  	<h2>Less Sucky</h2>
 				  	<aside class="notes">We get our jobs done quicker, more elegantly and without as much drudgery.</aside>
 				  </section>
 
-				 	<section data-background="assets/coordination.jpg">
-				 		<h2 class="fragment">Orchestration and Coordination</h2>
+				 	<section data-background="assets/coordination.jpg"  data-transition="fade" data-transition-speed="slow">
+				 		<h2 class="fragment grow">Orchestration and Coordination</h2>
 				 	</section>
 
 				 	<section data-background="assets/abstract.jpg">
-				 		<h3>vague and abstract at first...</h3>
+				 		<h5>The ideas and terminology can seem vague and abstract at first...</h5>
 				 		<aside class="notes">Because these tools coordinate other components, they
 				 			may seem vague or abstract at first, and you may seem some vague
 				 			and abstract terminology.</aside>
